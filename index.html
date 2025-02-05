@@ -3,55 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEALChain: Secure Patient Data</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Modern Web Project</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
 </head>
-<body styles="background-image:url("Wayfair_com - Online Home Store for Furniture, Decor, Outdoors & More.jpg")">
-    <div id="main">
-        <div id="page1">
-            <nav>
-                <div id="nav-left">
-                    <h4><a href="about.html">About</a></h4>
-                    <h4><a href="services.html">Services</a></h4>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white fixed w-full top-0 p-4 shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-lg font-bold">Brand</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#features" class="hover:text-gray-300">Features</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white" id="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="h-screen flex items-center justify-center text-center bg-blue-600 text-white">
+        <div data-aos="fade-up">
+            <h1 class="text-4xl font-bold">Welcome to Our Website</h1>
+            <p class="mt-4 text-lg">A modern website with animations and smooth interactions.</p>
+            <a href="#features" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-bold transition duration-300 hover:bg-gray-200">Explore Features</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Our Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 shadow-md rounded-md bg-gray-50" data-aos="zoom-in">
+                    <h3 class="text-xl font-bold mb-2">Fast & Responsive</h3>
+                    <p>Built with modern UI frameworks for speed and performance.</p>
                 </div>
-                <div class="logo-container">
-                    <img src="LogoSample_ByTailorBrands-removebg-preview.jpg" alt="NeuraCare Logo" class="logo">
+                <div class="p-6 shadow-md rounded-md bg-gray-50" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-2">Smooth Animations</h3>
+                    <p>Enhanced with AOS and GSAP for a great user experience.</p>
                 </div>
-                <div id="nav-right">
-                    <h4><a href="login.html">Login</a></h4>
-                    <div class="lang-dropdown">
-                        <h4 id="lang-btn">EN</h4>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Hindi</a></li>
-                            <li><a href="#">Kannada</a></li>
-                            <li><a href="#">Tamil</a></li>
-                        </ul>
-                    </div>
+                <div class="p-6 shadow-md rounded-md bg-gray-50" data-aos="zoom-in" data-aos-delay="400">
+                    <h3 class="text-xl font-bold mb-2">Easy to Customize</h3>
+                    <p>Well-structured code, making customization simple.</p>
                 </div>
-            </nav>
-            <!-- Hero Section -->
-            <section class="hero-section">
-            <div class="hero-content">
-                <h1>Welcome1</h1>
-            <h1 class="text-3xl font-bold text-center mt-10" data-aos="fade-up">
-    Welcome to Our Website
-</h1>
-            <div class="scroll-indicator">Scroll Down to Discover More</div>
-            <!--
-            <section class="image-section">
-            <img src="file-G2DKnYDPHw3fVfzWHLjsKz" alt="Medical App Preview" class="smooth-image">
-        </section>-->
+            </div>
         </div>
     </section>
-    </div> 
-    </div>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Get in Touch</h2>
+            <form class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <label class="block text-left">
+                    <span class="text-gray-700">Name</span>
+                    <input type="text" class="block w-full mt-1 px-4 py-2 border rounded-md focus:ring focus:ring-blue-300">
+                </label>
+                <label class="block text-left mt-4">
+                    <span class="text-gray-700">Email</span>
+                    <input type="email" class="block w-full mt-1 px-4 py-2 border rounded-md focus:ring focus:ring-blue-300">
+                </label>
+                <label class="block text-left mt-4">
+                    <span class="text-gray-700">Message</span>
+                    <textarea class="block w-full mt-1 px-4 py-2 border rounded-md focus:ring focus:ring-blue-300"></textarea>
+                </label>
+                <button class="mt-4 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-4 bg-gray-800 text-white">
+        <p>© 2025 All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // GSAP Animations
+        gsap.from("h1", { opacity: 0, y: -50, duration: 1.5 });
+        gsap.from("button", { opacity: 0, scale: 0.8, duration: 1, delay: 0.5 });
+
+        // Mobile Menu Toggle
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            alert("Menu functionality can be added here!");
+        });
+    </script>
 
 </body>
 </html>
