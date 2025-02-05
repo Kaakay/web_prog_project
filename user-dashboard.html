@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
+    <title>Doctor Dashboard - Patient Records</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,36 +19,59 @@
 
     <!-- Navbar -->
     <nav class="navbar p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">User Dashboard</h1>
+        <h1 class="text-xl font-bold">Doctor Dashboard</h1>
         <div class="menu flex space-x-4">
-            <a href="#">🏠 Home</a>
-            <a href="#">📅 My Schedule</a>
+            <a href="#">🏥 Patients</a>
+            <a href="#">⚕️ My Appointments</a>
             <a href="#">⚙ Settings</a>
             <a href="user-login.html" class="text-red-400">🚪 Logout</a>
         </div>
     </nav>
 
-    <!-- Dashboard Content -->
+    <!-- Patient Records -->
     <div class="p-6">
-        <h2 class="text-2xl font-bold text-gray-700">Welcome, User!</h2>
-        <p class="text-gray-600 mt-2">Here's an overview of your activities.</p>
+        <h2 class="text-2xl font-bold text-gray-700">Patient Records</h2>
+        <p class="text-gray-600 mt-2">Access patient history securely via blockchain.</p>
 
-        <!-- User Stats -->
-        <div class="grid grid-cols-3 gap-6 mt-6">
-            <div class="p-6 bg-indigo-500 text-white rounded-lg shadow-md">
-                <h3 class="text-xl font-bold">Tasks Completed</h3>
-                <p class="text-3xl">25</p>
-            </div>
-            <div class="p-6 bg-green-500 text-white rounded-lg shadow-md">
-                <h3 class="text-xl font-bold">Upcoming Events</h3>
-                <p class="text-3xl">3</p>
-            </div>
-            <div class="p-6 bg-red-500 text-white rounded-lg shadow-md">
-                <h3 class="text-xl font-bold">Pending Tasks</h3>
-                <p class="text-3xl">7</p>
-            </div>
+        <!-- Blockchain Verification -->
+        <div class="mt-4 bg-gray-100 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold">Blockchain Access Verification</h3>
+            <p class="text-gray-600">Click the button to verify access using blockchain.</p>
+            <button class="bg-green-500 text-white px-4 py-2 mt-2 rounded" onclick="verifyAccess()">🔗 Verify</button>
+            <p id="access-status" class="text-gray-700 mt-2"></p>
+        </div>
+
+        <!-- Patient History Table -->
+        <div class="mt-6 bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold">My Patients</h3>
+            <table class="w-full mt-4 border-collapse">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border p-2">Patient ID</th>
+                        <th class="border p-2">Name</th>
+                        <th class="border p-2">Age</th>
+                        <th class="border p-2">Last Visit</th>
+                        <th class="border p-2">View Records</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="border p-2">P1001</td>
+                        <td class="border p-2">John Doe</td>
+                        <td class="border p-2">45</td>
+                        <td class="border p-2">Jan 10, 2024</td>
+                        <td class="border p-2"><button class="bg-blue-500 text-white px-3 py-1 rounded">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+
+    <script>
+        function verifyAccess() {
+            document.getElementById("access-status").innerText = "✅ Access Verified via Blockchain!";
+        }
+    </script>
 
 </body>
 </html>
