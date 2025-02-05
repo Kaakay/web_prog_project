@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .navbar { background: #439643; color: white; }
+        .menu a { padding: 12px; text-decoration: none; color: white; }
+        .menu a:hover { background: rgba(255, 255, 255, 0.2); }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">User Dashboard</h1>
+        <div class="menu flex space-x-4">
+            <a href="#">🏠 Home</a>
+            <a href="#">📅 My Schedule</a>
+            <a href="#">⚙ Settings</a>
+            <a href="user-login.html" class="text-red-400">🚪 Logout</a>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="p-6">
+        <h2 class="text-2xl font-bold text-gray-700">Welcome, User!</h2>
+        <p class="text-gray-600 mt-2">Here's an overview of your activities.</p>
+
+        <!-- User Stats -->
+        <div class="grid grid-cols-3 gap-6 mt-6">
+            <div class="p-6 bg-indigo-500 text-white rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">Tasks Completed</h3>
+                <p class="text-3xl">25</p>
+            </div>
+            <div class="p-6 bg-green-500 text-white rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">Upcoming Events</h3>
+                <p class="text-3xl">3</p>
+            </div>
+            <div class="p-6 bg-red-500 text-white rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">Pending Tasks</h3>
+                <p class="text-3xl">7</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
