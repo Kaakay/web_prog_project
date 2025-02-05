@@ -211,7 +211,7 @@ body.scrolled .hero-content h1 {
 
 /* Left side with image */
 .left-side {
-    width: 100%; /* Adjust to your preference */
+    width: 200%; /* Adjust to your preference */
     display: flex;
     justify-content: center;
     align-items: center;
