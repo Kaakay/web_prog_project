@@ -54,3 +54,7 @@ window.addEventListener('scroll', () => {
         imageSection.classList.remove('scrolled');
     }
 });
+
+gsap.from("h1", { opacity: 0, y: -50, duration: 1.5 });
+gsap.from("button", { opacity: 0, scale: 0.8, duration: 1, delay: 0.5 });
+
