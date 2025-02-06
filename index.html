@@ -8,25 +8,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="icon" href="logo.ico" type="image/x-icon">
     <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #439643;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #439643;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+    <style>
         body { font-family: 'Poppins', sans-serif;}
         .custom-green { color: #439643; }
         .custom-bg-green { background-color: #439643; }
         .custom-hover-green:hover { background-color: #367a37; }
         ::-webkit-scrollbar {width: 1px;}
     </style>
-    <style>
-.perspective {
-    perspective: 1000px;
-}
-
-.backface-hidden {
-    backface-visibility: hidden;
-}
-
-.transform-style-preserve-3d {
-    transform-style: preserve-3d;
-}
-</style>
 </head>
 <body class="bg-white text-gray-800">
     
@@ -60,67 +92,44 @@
             NeuraLink leverages blockchain technology to provide a secure, tamper-proof, and decentralized platform for managing patient records efficiently.
         </p>
 
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="relative group perspective">
-                <div class="relative w-full h-80 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
-                    <!-- Front Side -->
-                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
-                        <img src="pic1.jpg" alt="Member 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold">Kaavya R</h3>
-                            <p class="text-gray-500">Front End Developer</p>
-                        </div>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
-                        <p class="text-gray-700">
-                            I am a passionate and curious learner with a keen interest in technology, specializing in Data Science. Currently a sophomore, I enjoy exploring how data can solve real-world problems and continuously expand my skills in programming, machine learning, and data analysis. I build creative projects in web development and front-end design, while balancing my academic journey with a focus on innovation and hands-on learning.
-                        </p>
-                    </div>
-                </div>
-            </div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img1.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Kaavya R</h1> 
+      <p>Frontend Designer</p> 
+      <p>I am a passionate and curious learner with a keen interest in technology, specializing in Data Science. Currently a sophomore, I enjoy exploring how data can solve real-world problems and continuously expand my skills in programming, machine learning, and data analysis. I build creative projects in web development and front-end design, while balancing my academic journey with a focus on innovation and hands-on learning.</p>
+    </div>
+  </div>
+</div>
 
-            <!-- Card 2 -->
-            <div class="relative group perspective">
-                <div class="relative w-full h-80 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
-                    <!-- Front Side -->
-                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
-                        <img src="Author01.png" alt="Member 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold">Abhiram Sharma</h3>
-                            <p class="text-gray-500">Blockchain Developer</p>
-                        </div>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
-                        <p class="text-gray-700">
-                            Abhiram Sharma, a VIT Chennai data science student, excels in computer vision, AI, deep learning, and cybersecurity. His research applies AI to healthcare, agriculture, and environmental challenges, including XAI-based diagnostics. He has authored research, showcasing algorithm expertise and use of technologies like CNNs. He founded the ECDS, promoting student collaboration. He led Team India to a Best Project Award at FLL 2019 and holds patents. He aims to bridge the gap between theoretical technology and real-world applications in secure communication, AI, and IoT.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Author01.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Abhiram Sharma</h1> 
+      <p>Blockchain Developer</p> 
+      <p>a VIT Chennai data science student, excels in computer vision, AI, deep learning, and cybersecurity. His research applies AI to healthcare, agriculture, and environmental challenges, including XAI-based diagnostics. He has authored research, showcasing algorithm expertise and use of technologies like CNNs. He founded the ECDS, promoting student collaboration. He led Team India to a Best Project Award at FLL 2019 and holds patents. He aims to bridge the gap between theoretical technology and real-world applications in secure communication, AI, and IoT.</p>
+    </div>
+  </div>
+</div>
 
-            <!-- Card 3 -->
-            <div class="relative group perspective">
-                <div class="relative w-full h-80 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
-                    <!-- Front Side -->
-                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
-                        <img src="pic3.jpg" alt="Member 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold">Swetha R V</h3>
-                            <p class="text-gray-500">Backend Integration</p>
-                        </div>
-                    </div>
-                    <!-- Back Side -->
-                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
-                        <p class="text-gray-700">
-                            I’m quite passionate about technology, with a particular interest in data science, machine learning, and AI. My curiosity drives me to constantly learn and explore new ideas, tools, and concepts in this rapidly evolving field. I strive to stay ahead by engaging in continuous learning and self-improvement. I'm excited to apply my skills, collaborate with others, and grow in the world of technology. Thanks for visiting our site, and feel free to connect with us!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img2.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Swetha R V</h1> 
+      <p>Backend Developer</p> 
+      <p>I’m quite passionate about technology, with a particular interest in data science, machine learning, and AI. My curiosity drives me to constantly learn and explore new ideas, tools, and concepts in this rapidly evolving field. I strive to stay ahead by engaging in continuous learning and self-improvement. I'm excited to apply my skills, collaborate with others, and grow in the world of technology. Thanks for visiting our site, and feel free to connect with us!</p>
+    </div>
+  </div>
+</div>
     </div>
 </section>
 
