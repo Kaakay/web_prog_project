@@ -58,6 +58,7 @@ body {
         .custom-bg-green { background-color: #439643; }
         .custom-hover-green:hover { background-color: #367a37; }
         ::-webkit-scrollbar {width: 1px;}
+        .card-container {display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap;}
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -89,9 +90,11 @@ body {
     <div class="container mx-auto text-center" data-aos="fade-up">
         <h2 class="text-3xl font-bold custom-green">About NeuraLink</h2>
         <p class="mt-4 max-w-2xl mx-auto text-gray-700">
-            NeuraLink leverages blockchain technology to provide a secure, tamper-proof, and decentralized platform for managing patient records efficiently.
+            NeuraLink revolutionizes patient record management by leveraging blockchain technology, addressing the shortcomings of traditional systems.  Its foundation lies in blockchain's inherent security, creating virtually tamper-proof records with an immutable audit trail.  Decentralization empowers patients with data control, distributing information across authorized participants and allowing patients to manage access permissions.  NeuraLink also fosters interoperability, enabling seamless data sharing between healthcare providers and eliminating data silos.  Transparency and auditability are enhanced, as every record modification is logged on the blockchain, fostering trust.  This, combined with streamlined processes and reduced administrative overhead, increases efficiency and lowers costs for both providers and patients.  Built for scalability and future-proofing, NeuraLink utilizes a permissioned blockchain with smart contracts for automation and robust encryption for data protection.
+<br>
+NeuraLink's potential applications are vast, ranging from secure medical history sharing to managing research consent, tracking prescriptions, and facilitating telemedicine.  By leveraging blockchain, NeuraLink offers a secure, efficient, and patient-centric platform, transforming healthcare by improving patient care, reducing costs, and enhancing data privacy.  It represents a paradigm shift in how patient records are managed, offering a more robust and equitable system for all stakeholders.
         </p>
-
+<div class="cards-container">
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -131,6 +134,7 @@ body {
   </div>
 </div>
     </div>
+    </div>
 </section>
 
 
@@ -158,7 +162,7 @@ body {
         </div>
     </section>
 
-    <footer class="p-4 bg-green shadow mt-8">
+    <footer class="p-4 bg-green shadow mt-8" styles="background-colour:#255425;">
     <div class="flex justify-between items-center">
         <p class="custom-green font-semibold">&copy; 2024 NeuraLink. All rights reserved under MIT License.</p>
         <a href="https://github.com/Kaakay/web_prog_project" target="_blank">
