@@ -1,6 +1,6 @@
 # NeuraLink: Decentralized Web3-Based Patient Record Management System 🌐🔐
 
-![NeuraLink Logo](logo.jpg)
+![NeuraLink Logo](Logo.jpg)
 
 ---
 
@@ -32,13 +32,16 @@ NeuraLink is a **Web3-based decentralized patient record management system** tha
 ## 🔹 Screenshots
 
 ### 🔑 Login Page
-![Login Page](path/to/login-screenshot.png)
+![Home Page](fig0.png)
+
+### 🔑 Login Page
+![Login Page](fig1.png)
 
 ### 📅 Clinic Dashboard
-![Clinic Dashboard](path/to/clinic-dashboard-screenshot.png)
+![Clinic Dashboard](fig2.png)
 
 ### 📆 User Dashboard
-![User Dashboard](path/to/user-dashboard-screenshot.png)
+![User Dashboard](fig3.png)
 
 ---
 
