@@ -6,7 +6,7 @@
     <title>NeuraLink - Decentralized Patient Records</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
+    <link rel="icon" href="logo.ico" type="image/x-icon">
     <style>
         body { font-family: 'Poppins', sans-serif;}
         .custom-green { color: #439643; }
@@ -40,14 +40,80 @@
         </div>
     </div>
     
-    <section id="about" class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center" data-aos="fade-up">
-            <h2 class="text-3xl font-bold custom-green">About NeuraLink</h2>
-            <p class="mt-4 max-w-2xl mx-auto text-gray-700">
-                NeuraLink leverages blockchain technology to provide a secure, tamper-proof, and decentralized platform for managing patient records efficiently.
-            </p>
+<section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold custom-green">About NeuraLink</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-700">
+            NeuraLink leverages blockchain technology to provide a secure, tamper-proof, and decentralized platform for managing patient records efficiently.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Team Member 1 -->
+            <div class="relative group perspective">
+                <div class="relative w-full h-80 transition-transform duration-500 transform group-hover:rotate-y-180">
+                    <!-- Front Side -->
+                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
+                        <img src="path/to/photo1.jpg" alt="Member 1" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold">Member 1 Name</h3>
+                            <p class="text-gray-500">Role/Position</p>
+                        </div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
+                        <p class="text-gray-700">Brief biography or interesting fact about Member 1.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="relative group perspective">
+                <div class="relative w-full h-80 transition-transform duration-500 transform group-hover:rotate-y-180">
+                    <!-- Front Side -->
+                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
+                        <img src="path/to/photo2.jpg" alt="Member 2" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold">Member 2 Name</h3>
+                            <p class="text-gray-500">Role/Position</p>
+                        </div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
+                        <p class="text-gray-700">Brief biography or interesting fact about Member 2.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="relative group perspective">
+                <div class="relative w-full h-80 transition-transform duration-500 transform group-hover:rotate-y-180">
+                    <!-- Front Side -->
+                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
+                        <img src="path/to/photo3.jpg" alt="Member 3" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold">Member 3 Name</h3>
+                            <p class="text-gray-500">Role/Position</p>
+                        </div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
+                        <p class="text-gray-700">Brief biography or interesting fact about Member 3.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+.perspective {
+    perspective: 1000px;
+}
+.backface-hidden {
+    backface-visibility: hidden;
+}
+</style>
+
 
     <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto text-center" data-aos="fade-up">
@@ -72,7 +138,7 @@
         </div>
     </section>
 
-    <footer class="p-4 bg-white shadow mt-8">
+    <footer class="p-4 bg-green shadow mt-8">
     <div class="flex justify-between items-center">
         <p class="custom-green font-semibold">&copy; 2024 NeuraLink. All rights reserved under MIT License.</p>
         <a href="https://github.com/Kaakay/web_prog_project" target="_blank">
