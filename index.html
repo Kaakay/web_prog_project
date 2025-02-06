@@ -14,6 +14,19 @@
         .custom-hover-green:hover { background-color: #367a37; }
         ::-webkit-scrollbar {width: 1px;}
     </style>
+    <style>
+.perspective {
+    perspective: 1000px;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.transform-style-preserve-3d {
+    transform-style: preserve-3d;
+}
+</style>
 </head>
 <body class="bg-white text-gray-800">
     
@@ -48,39 +61,50 @@
         </p>
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
             <div class="relative group perspective">
-                <div class="relative w-full h-80 transition-transform duration-500 transform group-hover:rotate-y-180">
+                <div class="relative w-full h-80 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
+                    <!-- Front Side -->
                     <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
                         <img src="pic1.jpg" alt="Member 1" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold">Kaavya R/h3>
+                            <h3 class="text-xl font-semibold">Kaavya R</h3>
                             <p class="text-gray-500">Front End Developer</p>
                         </div>
                     </div>
+                    <!-- Back Side -->
                     <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
-                        <p class="text-gray-700">I am a passionate and curious learner with a keen interest in technology, specializing in Data Science. Currently a sophomore, I enjoys exploring how data can solve real-world problems and is continuously expanding my skills in programming, machine learning, and data analysis. I am building creative projects, particularly in web development and front-end design, while also balancing my academic journey with a focus on innovation and hands-on learning.</p>
+                        <p class="text-gray-700">
+                            I am a passionate and curious learner with a keen interest in technology, specializing in Data Science. Currently a sophomore, I enjoy exploring how data can solve real-world problems and continuously expand my skills in programming, machine learning, and data analysis. I build creative projects in web development and front-end design, while balancing my academic journey with a focus on innovation and hands-on learning.
+                        </p>
                     </div>
                 </div>
             </div>
 
+            <!-- Card 2 -->
             <div class="relative group perspective">
-                <div class="relative w-full h-80 transition-transform duration-500 transform group-hover:rotate-y-180">
+                <div class="relative w-full h-80 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
+                    <!-- Front Side -->
                     <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
                         <img src="Author01.png" alt="Member 2" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="text-xl font-semibold">Abhiram Sharma</h3>
-                            <p class="text-gray-500">Blockchain</p>
+                            <p class="text-gray-500">Blockchain Developer</p>
                         </div>
                     </div>
+                    <!-- Back Side -->
                     <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
-                        <p class="text-gray-700">Abhiram Sharma, a data science student at VIT Chennai, excels in computer vision, AI, deep learning, and cybersecurity. His research focuses on applying AI to healthcare, agriculture, and environmental issues, with projects on XAI-based medical diagnostics and anomaly detection.  He's authored multiple research initiatives, showcasing expertise in algorithms and technologies like transfer learning and CNNs.  Sharma founded the ECDS, promoting student collaboration and technical events.  He also led Team India at FLL 2019, winning the Best Project Award, and holds patents for novel designs.  He aims to bridge the gap between theoretical technology and real-world applications in secure communication, AI, and IoT.
-</p>
+                        <p class="text-gray-700">
+                            Abhiram Sharma, a VIT Chennai data science student, excels in computer vision, AI, deep learning, and cybersecurity. His research applies AI to healthcare, agriculture, and environmental challenges, including XAI-based diagnostics. He has authored research, showcasing algorithm expertise and use of technologies like CNNs. He founded the ECDS, promoting student collaboration. He led Team India to a Best Project Award at FLL 2019 and holds patents. He aims to bridge the gap between theoretical technology and real-world applications in secure communication, AI, and IoT.
+                        </p>
                     </div>
                 </div>
             </div>
 
+            <!-- Card 3 -->
             <div class="relative group perspective">
-                <div class="relative w-full h-80 transition-transform duration-500 transform group-hover:rotate-y-180">
+                <div class="relative w-full h-80 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
+                    <!-- Front Side -->
                     <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl overflow-hidden">
                         <img src="pic3.jpg" alt="Member 3" class="w-full h-48 object-cover">
                         <div class="p-4">
@@ -88,10 +112,11 @@
                             <p class="text-gray-500">Backend Integration</p>
                         </div>
                     </div>
+                    <!-- Back Side -->
                     <div class="absolute w-full h-full backface-hidden bg-white shadow-lg rounded-2xl transform rotate-y-180 p-4 flex items-center justify-center">
-                        <p class="text-gray-700">I’m quite passionate about technology, with a particular interest in data science, machine learning, and AI. My curiosity drives me to constantly learn and explore new ideas, tools, and concepts in this rapidly evolving field. I strive to stay ahead by engaging in continuous learning and self-improvement. 
-
-I'm excited to apply my skills, collaborate with others, and grow in the world of technology. Thanks for visiting our site, and feel free to connect with us!</p>
+                        <p class="text-gray-700">
+                            I’m quite passionate about technology, with a particular interest in data science, machine learning, and AI. My curiosity drives me to constantly learn and explore new ideas, tools, and concepts in this rapidly evolving field. I strive to stay ahead by engaging in continuous learning and self-improvement. I'm excited to apply my skills, collaborate with others, and grow in the world of technology. Thanks for visiting our site, and feel free to connect with us!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -99,14 +124,6 @@ I'm excited to apply my skills, collaborate with others, and grow in the world o
     </div>
 </section>
 
-<style>
-.perspective {
-    perspective: 1000px;
-}
-.backface-hidden {
-    backface-visibility: hidden;
-}
-</style>
 
 
     <section id="contact" class="py-16 bg-white">
